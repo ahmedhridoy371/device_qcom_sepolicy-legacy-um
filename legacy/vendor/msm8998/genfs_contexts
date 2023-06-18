@@ -26,6 +26,12 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ###################################
 
+#rtc sysfs node
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc u:object_r:sysfs_rtc:s0
+
+#secure touch sysfs node
+genfscon sysfs /devices/soc/c179000.i2c/i2c-5/5-0020 u:object_r:sysfs_sectouch:s0
+
 # msm8998 specific sysfs
 genfscon sysfs /devices/soc/soc:qcom,ipa_fws@1e08000/subsys0/name                                u:object_r:sysfs_ssr:s0
 genfscon sysfs /devices/soc/cce0000.qcom,venus/subsys1/name                                      u:object_r:sysfs_ssr:s0
@@ -62,3 +68,17 @@ genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/blue u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d300/leds u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled u:object_r:sysfs_leds:s0
+
+#extcon
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/extcon/extcon0/cable.0/name          u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/extcon/extcon0/cable.1/name          u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/extcon/extcon0/cable.2/name          u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/extcon/extcon0/cable.3/name          u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/extcon/extcon1/cable.0/name     u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/extcon/extcon1/cable.1/name     u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/extcon/extcon1/cable.2/name     u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/extcon/extcon1/cable.3/name     u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700/extcon/extcon1/cable.4/name     u:object_r:sysfs_graphics:s0
+
+#ufs
+genfscon sysfs /devices/soc/1da4000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes           u:object_r:sysfs_mmc_host:s0
